@@ -32,7 +32,13 @@
 .method public abstract monitorInput(Ljava/lang/String;)Landroid/view/InputChannel;
 .end method
 
+.method public abstract reboot()V
+.end method
+
 .method public abstract rebootSafeMode()V
+.end method
+
+.method public abstract recovery()V
 .end method
 
 .method public abstract reevaluateStatusBarVisibility()V

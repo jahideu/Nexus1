@@ -1403,4 +1403,9 @@ for account %s."</string>
     <string name="zzzzz_gn_perm_default">Default</string>
     <string name="zzzzz_gn_select">select</string>
     <string name="zzzzz_gn_lockscreen_battery_percent">Battery: %d%%</string>
+    <string name="zzzzz_global_action_power_reboot">Reboot</string>
+    <string name="zzzzz_reboot_comfirm">Your phone will reboot.</string>
+    <string name="zzzzz_reboot_comfirm_request">Would you like to reboot?</string>
+    <string name="zzzzz_global_action_power_recovery">Recovery Mode</string>
+    <string name="zzzzz_recovery_comfirm">Your phone will reboot and enter Recovery</string>
 </resources>

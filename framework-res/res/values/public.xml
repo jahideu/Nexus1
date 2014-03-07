@@ -4332,6 +4332,11 @@
     <public type="string" name="zzzzz_gn_perm_default" id="0x0104055f" />
     <public type="string" name="zzzzz_gn_select" id="0x01040560" />
     <public type="string" name="zzzzz_gn_lockscreen_battery_percent" id="0x01040561" />
+    <public type="string" name="zzzzz_global_action_power_reboot" id="0x01040562" />
+    <public type="string" name="zzzzz_reboot_comfirm" id="0x01040563" />
+    <public type="string" name="zzzzz_reboot_comfirm_request" id="0x01040564" />
+    <public type="string" name="zzzzz_global_action_power_recovery" id="0x01040565" />
+    <public type="string" name="zzzzz_recovery_comfirm" id="0x01040566" />
     <public type="dimen" name="app_icon_size" id="0x01050000" />
     <public type="dimen" name="thumbnail_height" id="0x01050001" />
     <public type="dimen" name="thumbnail_width" id="0x01050002" />
@@ -6503,6 +6508,8 @@
     <public type="drawable" name="zzzzz_ic_appwidget_music_play" id="0x01080732" />
     <public type="drawable" name="zzzzz_ic_appwidget_music_previous" id="0x01080733" />
     <public type="drawable" name="zzzzzz_gn_list_section_divider_light" id="0x01080734" />
+    <public type="drawable" name="zzzzz_ic_lock_power_reboot" id="0x01080742" />
+    <public type="drawable" name="zzzzz_ic_lock_power_recovery" id="0x01080743" />
     <public type="layout" name="activity_list_item" id="0x01090000" />
     <public type="layout" name="expandable_list_content" id="0x01090001" />
     <public type="layout" name="preference_category" id="0x01090002" />

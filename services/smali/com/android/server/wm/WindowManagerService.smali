@@ -39624,6 +39624,20 @@
     goto :goto_1
 .end method
 
+.method public reboot()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/pm/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
 .method public rebootSafeMode()V
     .locals 2
 
@@ -40626,6 +40640,20 @@
     move-exception v12
 
     goto :goto_4
+.end method
+
+.method public recovery()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
+
+    const-string v1, "recovery"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/pm/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
+
+    return-void
 .end method
 
 .method public reenableKeyguard(Landroid/os/IBinder;)V

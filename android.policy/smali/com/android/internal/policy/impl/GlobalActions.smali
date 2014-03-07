@@ -863,6 +863,39 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 276
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
+
+    new-instance v2, Lcom/android/internal/policy/impl/GlobalActions$10;
+
+    const v3, 0x1080742
+
+    const v4, 0x1040562
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v2, v0, v3, v4}, Lcom/android/internal/policy/impl/GlobalActions$10;-><init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
+
+    new-instance v2, Lcom/android/internal/policy/impl/GlobalActions$11;
+
+    const v3, 0x1080743
+
+    const v4, 0x1040565
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v2, v0, v3, v4}, Lcom/android/internal/policy/impl/GlobalActions$11;-><init>(Lcom/android/internal/policy/impl/GlobalActions;II)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/internal/policy/impl/GlobalActions;->mItems:Ljava/util/ArrayList;
