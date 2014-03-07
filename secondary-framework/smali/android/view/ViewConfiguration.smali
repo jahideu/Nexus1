@@ -20,9 +20,9 @@
 
 .field private static final FADING_EDGE_LENGTH:I = 0xc
 
-.field private static final GIONEE_OVERFLING_DISTANCE:I = 0xf0
+.field private static final GIONEE_OVERFLING_DISTANCE:I = 0x6
 
-.field private static final GIONEE_OVERSCROLL_DISTANCE:I = 0xf0
+.field private static final GIONEE_OVERSCROLL_DISTANCE:I = 0x0
 
 .field private static final GLOBAL_ACTIONS_KEY_TIMEOUT:I = 0x1f4
 
@@ -142,7 +142,6 @@
     .end annotation
 
     .prologue
-    const/16 v5, 0xf0
 
     const/16 v4, 0x10
 
@@ -202,39 +201,25 @@
     iput v1, p0, Landroid/view/ViewConfiguration;->mMaximumDrawingCacheSize:I
 
     .line 272
-    const/4 v0, 0x1
+    const/4 v5, 0x0
 
     .line 273
-    .local v0, isGioneeViewStyle:Z
-    if-eqz v0, :cond_0
+
 
     .line 275
     iput v5, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
 
     .line 276
+	const/4 v5, 0x6
     iput v5, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
 
     .line 284
-    :goto_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/view/ViewConfiguration;->mFadingMarqueeEnabled:Z
 
     .line 285
     return-void
-
-    .line 279
-    :cond_0
-    const/4 v1, 0x0
-
-    iput v1, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
-
-    .line 280
-    const/4 v1, 0x6
-
-    iput v1, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
-
-    goto :goto_0
 .end method
 
 .method private constructor <init>(Landroid/content/Context;)V
@@ -407,41 +392,15 @@
 
     iput v9, p0, Landroid/view/ViewConfiguration;->mMaximumDrawingCacheSize:I
 
-    .line 327
-    const/4 v4, 0x1
-
-    .line 328
-    .local v4, isGioneeViewStyle:Z
-    if-eqz v4, :cond_2
-
-    .line 330
-    const/high16 v9, 0x4370
-
-    mul-float/2addr v9, v7
-
-    const/high16 v10, 0x3f00
-
-    add-float/2addr v9, v10
-
-    float-to-int v9, v9
+    const/4 v9, 0x0
 
     iput v9, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
 
-    .line 331
-    const/high16 v9, 0x4370
-
-    mul-float/2addr v9, v7
-
-    const/high16 v10, 0x3f00
-
-    add-float/2addr v9, v10
-
-    float-to-int v9, v9
+    const/4 v9, 0x6
 
     iput v9, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
 
     .line 340
-    :goto_1
     iget-boolean v9, p0, Landroid/view/ViewConfiguration;->sHasPermanentMenuKeySet:Z
 
     if-nez v9, :cond_0
@@ -458,17 +417,17 @@
 
     move-result v9
 
-    if-nez v9, :cond_3
+    if-nez v9, :cond_2
 
     invoke-interface {v8}, Landroid/view/IWindowManager;->hasNavigationBar()Z
 
     move-result v9
 
-    if-nez v9, :cond_3
+    if-nez v9, :cond_2
 
     const/4 v9, 0x1
 
-    :goto_2
+    :goto_1
     iput-boolean v9, p0, Landroid/view/ViewConfiguration;->sHasPermanentMenuKey:Z
 
     .line 344
@@ -481,7 +440,7 @@
     .line 350
     .end local v8           #wm:Landroid/view/IWindowManager;
     :cond_0
-    :goto_3
+    :goto_2
     const v9, 0x111000c
 
     invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -530,37 +489,10 @@
     :cond_2
     const/4 v9, 0x0
 
-    mul-float/2addr v9, v7
-
-    const/high16 v10, 0x3f00
-
-    add-float/2addr v9, v10
-
-    float-to-int v9, v9
-
-    iput v9, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
-
-    .line 335
-    const/high16 v9, 0x40c0
-
-    mul-float/2addr v9, v7
-
-    const/high16 v10, 0x3f00
-
-    add-float/2addr v9, v10
-
-    float-to-int v9, v9
-
-    iput v9, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
-
     goto :goto_1
 
     .line 343
     .restart local v8       #wm:Landroid/view/IWindowManager;
-    :cond_3
-    const/4 v9, 0x0
-
-    goto :goto_2
 
     .line 345
     :catch_0
@@ -572,7 +504,7 @@
 
     iput-boolean v9, p0, Landroid/view/ViewConfiguration;->sHasPermanentMenuKey:Z
 
-    goto :goto_3
+    goto :goto_2
 .end method
 
 .method public static get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
